@@ -1,0 +1,52 @@
+mixin hero(data)
+    .hero
+        .hero__top
+            .hero__in.in
+                .hero__image
+                    img(src="assets/images/general/transport-image.png", alt="")
+        .hero__body
+            .hero__in.in
+                h1.hero__title.title.title_h1 Оценка автомобиля для наследства
+                .hero__text
+                    p Подготовим документы в течение 20 минут.
+
+                .hero__w
+            
+                    ul.hero__list
+                        li.hero__item
+                            .hero__icon
+                                img(src="assets/images/general/time-icon.png", alt="")
+                            .hero__item-title 20 минут
+                            .hero__item-text Подготовка документов в течение 20 минут.
+
+                        li.hero__item
+                            .hero__icon
+                                img(src="assets/images/general/price-icon.png", alt="")
+                            .hero__item-title 1500 р
+                            .hero__item-text Цена отчета об оценке рыночной стоимости 
+
+                        li.hero__item
+                            .hero__icon
+                                img(src="assets/images/general/guarantee-icon.png", alt="")
+                            .hero__item-title Гарантия
+                            .hero__item-text Полное соответствие законодательству
+
+                        li.hero__item
+                            .hero__icon
+                                img(src="assets/images/general/delivery-icon.png", alt="")
+                            .hero__item-title Доставка
+                            .hero__item-text Получите оценку не выходя из дома
+
+                    .hero__form.form
+                        form(action="" method='post')
+                            .form__row
+                                .form__field.form__field_phone
+                                    input.form__input(type="text", value="", placeholder="+7(926)772-27-27")
+                            input.form__submit.button(type="submit", value="жду звонка")
+                            .form__row
+                                .form__field.form__field_checkbox.form__field_privacy
+                                    label.form__label(for="callback-1") 
+                                        input#callback-1.form__checkbox(type="checkbox" value="" checked)
+                                        span.form__label-text Я согласен <a href='#'>с условиями</a> обработки персональных данных
+
+    // end hero

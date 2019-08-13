@@ -1,0 +1,52 @@
+.contacts {
+    text-align: right;
+    &__phone {
+        position: relative;
+        margin-bottom: 6px;
+        padding-left: 22px;
+        display: block;
+        color: #FFF;
+        font-family: $b;
+        font-size: 28px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: "";
+            @include bg($phone-icon);
+            transform: translateY(-50%);
+
+        }
+    }
+
+    &__callback {
+        padding-bottom: 1px;
+        
+        display: block;
+        color: #FFF;
+        font-size: 16px;
+        text-decoration: none;
+        
+        span {
+            
+            border-bottom: 1px dotted #fff;
+            @include tr(all .3s ease);
+        }
+
+
+        &:hover {
+
+            span {
+
+                border-bottom: 1px dotted transparent;
+                @include tr(all .3s ease);
+                
+            }
+        }
+
+    }
+
+}

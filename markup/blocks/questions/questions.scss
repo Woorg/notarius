@@ -1,0 +1,118 @@
+.questions {
+    
+    background-image: linear-gradient(180deg, #fafdff 0%, #f3faff 100%);
+    
+    &__in {
+        padding-top: 21px;
+        padding-bottom: 41px;
+
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: #0c9dd9;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.285;
+    }
+
+    &__w {
+        display: flex;
+        
+    }
+
+    &__image {
+        margin-top: 14px;
+        margin-right: 90px;
+        img {
+            
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__phone {
+        margin-top: 48px;
+        color: #0c9dd9;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+
+
+    &__phone-title {
+        
+    }
+
+    &__phone-val {
+        color: #0c9dd9;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1;
+        text-decoration: none;
+        &:hover {
+            color: darken(#0c9dd9, 10);
+        }
+        
+    }
+
+    &__form {
+        margin-top: -4px;
+        margin-left: 85px;
+        max-width: 280px;
+        width: 100%;
+        
+    }
+
+    .form__label {
+        text-align: center;
+        display: block;
+        color: #0c9dd9;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1;
+
+    }
+    .form__field_phone {
+
+        &:after {
+            top: calc(50% + 12px);
+        }
+
+    }
+
+    .form__input {
+        margin-top: 4px;
+    }
+
+
+    .form__field_privacy {
+
+        .form__label-text {
+            padding-left: 31px;
+            color: #636363;
+            font-size: 14px;
+            text-align: left;
+            line-height: 1.42857142857143;
+
+        }
+
+    }
+
+    .form__field_checkbox {
+
+        .form__label {
+
+            // .form__checkbox {
+
+            //     top: 2px;
+                
+            // }
+
+        }        
+    }
+
+
+
+}

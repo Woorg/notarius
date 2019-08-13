@@ -1,0 +1,167 @@
+.hero {
+    color: #000;
+    &__top {
+        padding-top: 36px;
+
+    }
+
+
+    &__in {
+        
+
+    }
+
+
+    &__image {
+        text-align: center;
+                
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    }
+
+
+    &__body {
+        padding-top: 19px;
+        padding-bottom: 30px;
+        background-color: #f9f9f9;
+    }
+
+    &__title {
+        margin-bottom: 3px;
+    }
+
+
+    &__text {
+        margin-bottom: 41px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.27;
+
+    }
+
+    &__w {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+
+    &__list {
+        // margin-right: 50px;
+        max-width: 638px;
+        display: flex;
+        flex-wrap: wrap;        
+
+    }
+
+
+    &__item {
+        position: relative;
+        margin-bottom: 28px;
+        padding-left: 67px;
+            
+        max-width: 50%;
+        
+        &:nth-child(1) {
+            
+            .hero__icon {
+                width: (100px / 2);
+                height: (100px / 2);
+            }
+
+        }
+
+        &:nth-child(2) {
+            padding-left: 54px;
+            .hero__icon {
+                top: -4px;
+                left: 4px;
+                width: (76px / 2);
+                height: (84px / 2);
+            }
+
+            .hero__item-text {
+                padding-right: 20px;
+            }
+
+        }
+        
+        &:nth-child(3) {
+            
+            .hero__icon {
+                left: 5px;
+                width: 46px;
+                height: 50px;
+            }
+
+            .hero__item-title {
+                margin-top: 5px;
+                
+            }
+
+            .hero__item-text {
+                // padding-right: 20px;
+            }
+
+        }
+
+        &:nth-child(4) {
+            
+            .hero__icon {
+                left: 4px;
+                width: (84px / 2);
+                height: (80px / 2);
+            }
+
+            .hero__item-title {
+                margin-top: 7px;
+                margin-left: -6px;
+                
+            }
+
+            .hero__item-text {
+                margin-left: -7px;
+                padding-right: 50px;
+            }
+
+        }
+
+        
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 6px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__item-text {
+        color: #636363;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    &__form {
+        margin-top: -11px;
+        max-width: 280px;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,16 @@
+.logo {
+    
+    @include bg($logo);
+    
+    text-indent: -9999px;
+    text-decoration: none;
+    opacity: 1;
+    
+    @include tr(opacity .3s ease);
+
+    &:hover {
+        opacity: 0.8;
+        @include tr(opacity .3s ease);
+        
+    }
+}

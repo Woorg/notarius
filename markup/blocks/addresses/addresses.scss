@@ -1,0 +1,129 @@
+.addresses {
+    
+    &__in {
+        padding-top: 102px;
+        padding-bottom: 30px;
+
+    }
+
+
+    &__title {
+        margin-bottom: 28px;   
+    }
+
+    &__address-w {
+        padding-bottom: 77px;
+        display: flex;
+
+    }
+
+
+    &__address-content {
+        max-width: 460px;
+        width: 100%;
+        
+    }
+
+
+    &__address-title {
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    &__subway-w {
+        margin-bottom: 26px;
+        display: flex;
+        justify-content: space-between;
+           
+    }
+
+
+    &__subway {
+        position: relative;
+        margin-right: 23px;
+        padding-left: 31px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__subway-icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding: 3px;
+        width: 22px;
+        height: 22px;
+        background-color: #29abe2;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 900;
+        text-align: center;
+        border-radius: 50%;
+        transform: translateY(-50%);
+
+    }
+
+    &__address {
+        position: relative;
+        padding-left: 27px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.09;
+        &:after {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 16px;
+            height: 22px;
+            content: '';
+            background: url('../images/general/marker-icon.svg') 0 0 no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__list-title {
+        margin-top: 38px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.272;
+    }
+
+
+    &__list {
+        
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 20px;
+        padding-left: 22px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.388;
+        &:after {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            content: "";
+            background: url('../images/general/checkbox-icon.svg') 0 0 no-repeat;
+            
+        }
+        
+    }
+
+
+    &__address-map {
+        max-width: 480px;
+        width: 100%;
+        height: 404px;
+    }
+
+}

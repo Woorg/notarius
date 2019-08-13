@@ -1,0 +1,371 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+
+/* h1 */
+
+
+.lazy-bg {
+    display: none;
+    
+    &.visible {
+
+        display: block;
+    
+    }
+
+}
+
+.button {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 60px;
+    background-image: linear-gradient(180deg, #48d0fd 0%, #0e9fd8 100%);
+    color: #ffffff;
+    font-weight: 700;
+    @include css-lock(14, 17, 320, 970, font-size);
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(120, 116, 116, 0.5);
+    border-radius: 31px;
+    @include tr(all .3s ease);
+    
+
+    &:hover {
+        background-image: linear-gradient(180deg, #48d0fd 0%, #0e9fd8 100%);
+        box-shadow: 0 2px 4px rgba(120, 116, 116, 0.5), inset 0 1px 10px 4px rgba(255, 255, 255, 0.8);
+        border-radius: 31px;
+
+        @include tr(all .3s ease);
+    }
+
+}
+
+
+.title {
+    color: #000;
+    &_h1,
+    h1 {
+        font-family: $r;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.3;
+        
+        @include css-lock(31, 50, 320, 970, font-size);
+        
+        
+        @include r($sm) {
+            line-height: 1.29;
+        }
+
+    }
+    &_h2,
+    h2 {
+        font-size: 43px;
+        font-weight: 700;
+        line-height: 1.279;
+        
+        @include css-lock(27, 43, 320, 970, font-size);
+        
+        @include r($sm) {
+
+            line-height: 1.29;
+        }
+    }
+    &_h3,
+    h3 {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.285
+        ;
+        @include css-lock(24, 35, 320, 970, font-size);
+        
+        @include r($sm) {
+            line-height: 1.291;
+        }
+
+    }
+    &_h4,
+    h4 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.285;
+        
+        @include css-lock(16, 28, 320, 970, font-size);
+        
+        @include r($sm) {
+            line-height: 1.29;
+        }
+
+    }
+    &_h5,
+    h5 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.272;
+        
+        @include css-lock(18px, 22, 320, 970, font-size);
+    
+        @include r($sm) {
+            line-height: 1.285;
+        }
+
+    }
+    &_h6,
+    h6 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        
+        @include css-lock(16, 16, 320, 970, font-size);
+        
+        @include r($sm) {
+            line-height: 1.29;
+        }
+    }
+
+
+}
+
+
+
+.wysiwyg {
+
+    h1 {
+        font-family: $r;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.3;
+        
+        @include css-lock(31, 50, 320, 970, font-size);
+        
+        
+        @include r($sm) {
+            line-height: 1.29;
+        }
+
+    }
+    h2 {
+        margin-bottom: 15px;
+        font-size: 43px;
+        font-weight: 700;
+        line-height: 1.279;
+        
+        @include css-lock(27, 43, 320, 970, font-size);
+        
+        @include r($sm) {
+
+            line-height: 1.29;
+        }
+    }
+    h3 {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.285
+        ;
+        @include css-lock(24, 35, 320, 970, font-size);
+        
+        @include r($sm) {
+            line-height: 1.291;
+        }
+
+    }
+    h4 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.285;
+        
+        @include css-lock(16, 28, 320, 970, font-size);
+        
+        @include r($sm) {
+            line-height: 1.29;
+        }
+
+    }
+    h5 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.272;
+        
+        @include css-lock(18px, 22, 320, 970, font-size);
+    
+        @include r($sm) {
+            line-height: 1.285;
+        }
+
+    }
+    h6 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        
+        @include css-lock(16, 16, 320, 970, font-size);
+        
+        @include r($sm) {
+            line-height: 1.29;
+        }
+    }
+    
+    p {
+        margin-bottom: 10px;
+        max-width: 780px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.33333333333333;
+
+        @include css-lock(16, 18, 320, 970, font-size);
+
+        
+        @include r($sm) {
+
+            line-height: 1.375;
+        }
+    
+
+    }
+
+
+    strong {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.27272727272727;
+        @include css-lock(16, 22, 320, 970, font-size);
+        
+    }
+
+    i,
+    del {
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+
+        @include css-lock(12, 16, 320, 970, font-size);
+
+        @include r($sm) {
+
+            line-height: 1.25;
+        }
+
+
+    }
+
+
+    i {
+
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.4;
+        
+        @include css-lock(12, 18, 320, 970, font-size);
+
+        @include r($sm) {
+
+            line-height: 1.388;
+        }
+
+
+    }
+
+
+    ol {
+        margin-top: 38px;
+        margin-bottom: 38px;
+        margin-left: 25px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+        list-style-type: decimal;
+
+        @include css-lock(14, 18, 320, 970, font-size);
+
+        @include r($sm) {
+
+            line-height: 1.6;
+            
+        }
+
+
+    }
+
+
+    ul {
+        margin-top: 38px;
+        margin-bottom: 38px;
+        margin-left: 25px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+
+        @include css-lock(14, 18, 320, 970, font-size);
+
+        @include r($sm) {
+
+            line-height: 1.6;
+            
+        }
+
+
+        li {
+            position: relative;
+            padding-left: 10px;
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                width: 16px;
+                height: 16px;
+                background: url('../images/general/checkbox-icon.svg') 50% 0 no-repeat;
+                background-size: cover;
+
+            }
+
+        }
+
+
+    }
+
+
+    blockquote {
+        margin-top: 40px;
+        margin-left: 15px;
+        margin-bottom: 34px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.166;
+        
+        @include css-lock(20, 24, 320, 970, font-size);
+
+        @include r($sm) {
+
+            line-height: 1.3;
+            
+        }
+
+
+        p {
+            
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.166;
+            
+            @include css-lock(20, 24, 320, 970, font-size);
+
+            @include r($sm) {
+
+                line-height: 1.3;
+                
+            }
+
+        }
+
+    }
+
+
+
+
+
+}

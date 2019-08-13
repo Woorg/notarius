@@ -1,0 +1,73 @@
+doctype html
+html(class="no-js", lang="ru")
+
+
+    include ../blocks/head/head.pug
+    
+    
+    include ../blocks/header/header.pug
+    include ../blocks/nav/nav.pug
+    include ../blocks/contacts/contacts.pug
+
+    include ../blocks/hero/hero.pug
+    include ../blocks/form/form.pug
+    include ../blocks/inherit/inherit.pug
+    include ../blocks/what/what.pug
+    include ../blocks/calc/calc.pug
+    include ../blocks/accept/accept.pug
+    include ../blocks/options/options.pug
+    include ../blocks/result/result.pug
+    include ../blocks/faq/faq.pug
+    include ../blocks/licenses/licenses.pug
+    include ../blocks/clients/clients.pug
+    include ../blocks/articles/articles.pug
+    include ../blocks/cta/cta.pug
+    include ../blocks/addresses/addresses.pug
+    include ../blocks/questions/questions.pug
+
+
+    include ../blocks/footer/footer.pug
+
+    include ../blocks/popup/popup.pug
+    include ../blocks/order/order.pug
+
+
+    head
+        +head(head.defaults)
+    body.page
+        .page__wrapper
+
+            |%=symbols=%
+        
+            +header()
+
+            main.page__inner
+                +hero()
+                +inherit()
+                +what()
+                +calc()
+                +accept()
+                +options()
+                +result()
+                +faq()
+                +licenses()
+                +clients()
+                +articles()
+                +articles-second()
+                +cta()
+                +addresses()
+                +questions()
+
+            .page__footer
+                +footer()
+
+
+
+        script(src='//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU&8bccaf23-e575-42cc-af50-937b35ec0ab1')
+        script(src='%=static=%js/separate-js/jquery.min.js')
+        script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+
+        script(src='%=static=%js/separate-js/slick.min.js')
+        script(src='%=static=%js/separate-js/jquery.mask.min.js')
+
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,71 @@
+.header {
+
+    background: #58585a;
+    
+    &__in {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        color: #FFF;
+        
+    }
+
+    &__logo {
+        margin-right: 84px;
+    }
+
+    &__upload {
+        position: relative;
+        margin-right: 42px;
+        padding-top: 12px;
+        padding-left: 59px;
+        max-width: 264px;
+        
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.1;
+        text-transform: none;
+        
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 46px;
+            height: 46px;
+            content: "";
+
+            @include bg($upload-icon);
+            
+            @include tr(all .3s ease);
+            
+            transform: translateY(-50%);
+            
+        }
+
+        &:hover {
+            color: darken(#fff, 10);
+            
+            @include tr(all .3s ease);
+            
+            text-decoration: none;
+            
+
+        }
+
+
+    }
+
+    
+    &__nav {
+        margin-top: 24px;
+
+    }
+
+    &__contacts {
+        margin-top: 6px;
+        margin-right: 6px;
+        margin-left: auto;
+
+    }
+
+}

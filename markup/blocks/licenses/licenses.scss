@@ -1,0 +1,43 @@
+.licenses {
+    background-color: #f4faff;
+    overflow: hidden;
+    padding-bottom: 96px;
+    &__in {
+        padding-top: 33px;
+        padding-bottom: 7px;
+        
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+    }
+
+    &__list {
+        
+    }
+
+    &__item {
+        // width: 182px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        
+    }
+
+    &__image {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+        img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+        }   
+    }
+
+
+
+}

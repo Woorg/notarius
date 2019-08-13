@@ -1,0 +1,89 @@
+/* Your custom fonts here */
+
+/* Example
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/Custom-Font.eot');
+    src: url('../fonts/Custom-Font.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Custom-Font.woff') format('woff'),
+         url('../fonts/Custom-Font.svg#custom_font') format('svg');
+    font-weight: 400;       // For normal width. It could has another value   
+    font-style: normal;     // Also could has another value
+    }
+
+
+// Var for using custom font
+$CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
+*/
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('BebasNeueBold'),
+        url('../fonts/hinted-subset-BebasNeueBold.woff2') format('woff2'),
+        url('../fonts/hinted-subset-BebasNeueBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/hinted-subset-Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
+        url('../fonts/hinted-subset-Roboto-LightItalic.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Roboto-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../fonts/hinted-subset-Roboto-Black.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../fonts/hinted-subset-Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('../fonts/hinted-subset-Roboto-Light.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+        url('../fonts/hinted-subset-Roboto-BoldItalic.woff2') format('woff2'),
+        url('../fonts/hinted-subset-Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+$b: 'Bebas Neue',  Arial, "Helvetica Neue", Helvetica, sans-serif;
+$r: 'Roboto',  Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+
+
+
