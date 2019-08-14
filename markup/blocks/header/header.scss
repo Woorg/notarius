@@ -12,6 +12,11 @@
 
     &__logo {
         margin-right: 84px;
+        
+        @include r($lg) {
+            margin-right: auto;
+        }
+
     }
 
     &__upload {
@@ -26,6 +31,11 @@
         line-height: 1.1;
         text-transform: none;
         
+        @include r($lg) {
+            margin-right: auto;
+        }
+
+
         &:after {
             position: absolute;
             top: 50%;

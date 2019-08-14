@@ -31,14 +31,14 @@ html(class="no-js", lang="ru")
     include ../blocks/popup/popup.pug
     include ../blocks/order/order.pug
 
-
     head
         +head(head.defaults)
     body.page
         .page__wrapper
 
             |%=symbols=%
-        
+            +order().mfp-hide
+
             +header()
 
             main.page__inner
@@ -61,12 +61,14 @@ html(class="no-js", lang="ru")
             .page__footer
                 +footer()
 
-
+            +popup-order()
+            +popup-trankyou()
+            +popup-consult()
 
         script(src='//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU&8bccaf23-e575-42cc-af50-937b35ec0ab1')
         script(src='%=static=%js/separate-js/jquery.min.js')
+        script(src='%=static=%js/separate-js/dropzone.min.js')
         script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
-
         script(src='%=static=%js/separate-js/slick.min.js')
         script(src='%=static=%js/separate-js/jquery.mask.min.js')
 

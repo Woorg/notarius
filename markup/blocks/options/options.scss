@@ -172,6 +172,20 @@
         color: #000;
     }
 
+    &__inspect {
+         .options__form-title {
+             margin-bottom: 14px;
+         }
+
+        .form__label-text {
+            padding-left: 40px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #454548;
+        }
+
+    }
+
     &__form-bottom
     {
         margin-top: 34px;

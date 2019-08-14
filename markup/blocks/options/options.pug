@@ -184,16 +184,16 @@ mixin options(data)
                                 input.form__radio(type="radio", value="4" name='cars_number_2')
                                 .form__label-text 4
                     
-                    .form__row.form__row_radio.form__row_radio-full.form__row_deliv
+                    .options__inspect.form__row.form__row_radio.form__row_radio-full.form__row_deliv
                         .options__form-title Место осмотра:
                         .form__field.form__field_radio
                             label.form__label 
                                 input.form__radio(type="radio", value="office" name='cars_place' checked)
-                                | У нашего офиса
+                                .form__label-text У нашего офиса
                         .form__field.form__field_radio
                             label.form__label 
                                 input.form__radio(type="radio", value="mkad" name='cars_place')
-                                | Внутри МКАД + 10 км
+                                .form__label-text Внутри МКАД + 10 км
 
                                 //- span.form__none стоимость выезда внутри МКАД 1000 р
 
@@ -201,7 +201,7 @@ mixin options(data)
                         .form__field.form__field_radio
                             label.form__label 
                                 input.form__radio(type="radio", value="offmkad" name='cars_place')
-                                | За МКАД 10-20 км 
+                                .form__label-text За МКАД 10-20 км 
 
 
                     .options__form-bottom

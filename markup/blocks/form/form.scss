@@ -12,6 +12,11 @@
 
     }
 
+    &__row_address {
+        margin-bottom: 30px;
+    }
+
+
 
     &__row_radio-full {
         flex-direction: column;
@@ -24,7 +29,7 @@
             margin-bottom: 30px;
 
             .form__label {
-                padding-left: 42px;
+                // padding-left: 42px;
                 color: #57575a;
                 font-size: 18px;
                 font-weight: 400;
@@ -33,6 +38,7 @@
         }
 
     }
+
 
 
     &__field_phone
@@ -99,6 +105,16 @@
             color: #000;
         }
     }
+
+
+    &__field_image {
+        position: relative;
+        
+        display: flex;
+        align-items: center;
+        
+    }
+
 
 
     &__label,
@@ -273,8 +289,50 @@
 
     }
 
-    &__input
-    {
+    &__field_radio_second {
+        
+        .form__label-text {
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.17;
+        }
+
+    }
+
+    &__field_address {
+        
+
+        .form__label-text {
+            margin-bottom: 4px;
+            padding-left: 0;
+            display: block;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.17;
+            color: #000;
+        }
+
+        .form__input {
+            padding-left: 22px;
+            padding-right: 22px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            
+            @include placeholder() {
+                color: #000;
+
+            }
+
+        }
+
+    }
+
+
+    &__input {
+        border: 5px solid #0c9dd9;
+
         font-size: 24px;
         font-weight: 700;
 
@@ -286,12 +344,10 @@
         padding-left: 28px;
 
         color: #0c9dd9;
-        border: 5px solid #0c9dd9;
-        border-radius: 30px;
         background-color: #fff;
+        border-radius: 30px;
 
-        @include placeholder()
-        {
+        @include placeholder() {
             color: #0c9dd9;
         }
     }
@@ -322,4 +378,11 @@
 
         border: none;
     }
+
+
+    &__file {
+        display: none;
+    }
+
+
 }

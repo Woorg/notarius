@@ -1,2 +1,45 @@
-mixin popup(data)
-    .popup
+mixin popup-order(data)
+    .popup&attributes(attributes)
+        h2.popup__title Заказ оценки
+        .popup__text Мы свяжемся с вами  в течение <span>10 минут</span> и расскажем что нужно для проведения оценки.
+
+        .popup__form.form
+            form(action="" method='post')
+                .form__row
+                    .form__field.form__field_phone
+                        input.form__input(type="text", value="", placeholder="+7(926)772-27-27")
+                input.form__submit.button(type="submit", value="жду звонка")
+                .form__row
+                    .form__field.form__field_checkbox.form__field_privacy
+                        label.form__label
+                            input.form__checkbox(type="checkbox" value="" checked required)
+                            span.form__label-text Я согласен <a href='#'>с условиями</a> обработки персональных данных
+
+
+mixin popup-trankyou(data)
+    .popup.popup_thankyou&attributes(attributes)
+        h2.popup__title Спасибо за обращение!
+
+        .popup__text Мы свяжемся с вами в течение <span>10 минут</span> и уточним детали. 
+
+        .popup__form.form
+            input.form__submit.button(type="submit", value="жду звонка")
+              
+                 
+
+mixin popup-consult(data)
+    .popup&attributes(attributes)
+        h2.popup__title Заказ консультации
+        .popup__text Мы свяжемся с вами  в течение <span>10 минут</span> и расскажем что нужно для проведения оценки.
+
+        .popup__form.form
+            form(action="" method='post')
+                .form__row
+                    .form__field.form__field_phone
+                        input.form__input(type="text", value="", placeholder="+7(926)772-27-27")
+                input.form__submit.button(type="submit", value="жду звонка")
+                .form__row
+                    .form__field.form__field_checkbox.form__field_privacy
+                        label.form__label
+                            input.form__checkbox(type="checkbox" value="" checked required)
+                            span.form__label-text Я согласен <a href='#'>с условиями</a> обработки персональных данных

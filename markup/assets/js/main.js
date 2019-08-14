@@ -1,10 +1,15 @@
 import svg4everybody from 'svg4everybody';
 // import $ from 'jquery';
 import 'ion-rangeslider';
+// import Dropzone from 'dropzone';
+
 // import 'magnific-popup';
 // import slick from 'slick-carousel';
 // import "jquery-mask-plugin";
 // import bound from 'bounds.js';
+
+
+
 
 (function ($) {
 
@@ -26,6 +31,58 @@ import 'ion-rangeslider';
     console.log('%c developed by igor gorlov gorlov https://webjeb.ru', styles);
 
     $(function() {
+
+        /*
+            Upload Documents
+        */
+
+        // Dropzone.options.dropzoneFrom =  {
+
+        //     autoProcessQueue: false,
+        //     acceptedFiles: '.png,.jpg,.jpeg,.webp',
+        //     init: function () {
+
+        //         var $submitButton = document.querySelector('.order__submit');
+        //         myDropzone = this;
+
+        //         $submitButton.click(function () {
+        //             myDropzone.processQueue();
+        //         });
+
+        //         this.on('complete', function () {
+
+        //             if ( this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0 ) {
+        //                 var _this = this;
+        //                 _this.removeAllFiles();
+        //             }
+
+        //         });
+
+        //     }
+
+        // }
+
+
+
+        var myDropzone = new Dropzone('.form__field_image .order__dropzone', {url: '/file/post'});
+
+
+
+
+        // $('.order__add-vehicle').on('click', function (e) {
+        //     e.preventDefault();
+        //     var $vehicle = $('.order__upload_vehicle'),
+        //         $vehicleNum = $('order__upload_vehicle')
+
+
+        //     $vehicle.clone().appendTo('.order__upload-w');
+
+        // });
+
+
+
+
+
 
         /*
             Phone Mask
@@ -136,8 +193,76 @@ import 'ion-rangeslider';
         */
 
 
-        var $range = $(".js-range-slider"),
-            $inputFrom = $(".form__input_range"),
+       var  $range2 = $(".order .form__range"),
+            $inputFrom2 = $(".order .form__input_range"),
+            instance2,
+            min2 = 10000,
+            max2 = 5000000,
+            from2 = 0,
+            fromPretty2 = '',
+            to2 = 0;
+
+            
+            $range2.ionRangeSlider({
+                type: "single",
+                min: min2,
+                max: max2,
+                from: 10000,
+                to: 5000000,
+                prefix: ' км',
+                
+                onStart: updateInputs_second,
+                onChange: updateInputs_second,
+
+                step: 5000,
+                prettify_enabled: true,
+                prettify_separator: " ",
+                force_edges: true,
+                hide_min_max: true,
+                hide_from_to: true,
+
+            });
+            
+            
+            instance2 = $range2.data("ionRangeSlider");
+            
+            function updateInputs_second(data2) {
+                from2 = data2.from;
+                fromPretty2 = data2.from_pretty;
+                to2 = data2.to;
+                
+                $inputFrom2.prop("value", data2.from_pretty + " км");
+                console.log(data2.from_pretty);
+                
+                
+            }
+            
+            
+            $inputFrom2.on("input", function () {
+                var val2 = $(this).prop("value");
+
+                val2 = val2.replace(/\D/g,'');
+
+                // console.log(val2)
+
+                // $(this).html( val + 'руб');
+
+                // validate
+                // if (val2 < min2) {
+                //     val2 = min2;
+                // } else if (val2 > to2) {
+                //     val2 = to2;
+                // }
+                
+                instance2.update({
+                    from: val2
+                });
+            });
+            
+
+
+        var $range = $(".calc .js-range-slider"),
+            $inputFrom = $(".calc .form__input_range"),
             $result = $('.calc__result-price'),
             instance,
             min = 20000,
@@ -252,6 +377,13 @@ import 'ion-rangeslider';
                 $('.calc__result-price').html(Math.round((val * 0.6) / 100));
             }
         });
+
+
+        
+
+
+
+
 
 
         let $optRadio = $(".options__w_first .form__radio");
@@ -379,6 +511,42 @@ import 'ion-rangeslider';
 
 
         });
+
+
+        /* 
+            Оrder
+        
+        */
+
+
+
+        let $orderDelivRadio = $(".order__delivery .form__radio");
+
+
+        $orderDelivRadio.click(function() {
+
+            if( $('.order__delivery .form__radio:checked').prop("value") == 'pick_up' ) {
+                $('.order__delivery-address').removeClass('order__delivery-address_active');
+                $('.order__pickup').addClass('order__pickup_active');
+                
+            } else if( $('.order__delivery .form__radio:checked').prop("value") == 1 ) {
+
+                $('.order__pickup').removeClass('order__pickup_active');
+                $('.order__delivery-address').addClass('order__delivery-address_active');
+
+
+            } 
+
+
+
+        });
+
+
+
+
+
+
+
 
 
         /*
