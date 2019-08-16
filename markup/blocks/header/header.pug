@@ -1,11 +1,17 @@
 mixin header(data)
-    .header
+    header.header
         .header__in.in
             a.header__logo.logo(href="#logo") Экспертис
             a.header__upload(href="#") 
                 | отправить фото документов для оценки
             
             nav.header__nav.nav
+                label.nav__trigger(for="navTrigger")
+                    span.nav__trigger-text Меню
+                    != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'nav__trigger-icon'})
+
+                input#navTrigger.nav__checkbox(type="checkbox", value="")
+
                 ul.nav__list
                     li.nav__item
                         a.nav__link(href="#") Отзывы
@@ -20,7 +26,9 @@ mixin header(data)
                         a.nav__link(href="#") Контакты
 
             .header__contacts.contacts
-                a.contacts__phone(href="#") 499 506 08 70
+                a.contacts__phone(href="tel:+74995060870")
+                    span 8 
+                    | 499 506 08 70
                 a.contacts__callback(href="#")
                     span заказать звонок
 

@@ -1,36 +1,108 @@
 .nav {
-	
-	&__list {
-		display: flex;
-		font-size: 14px;
-	}
+    position: relative;
+    &__trigger {
+        display: none;  
+        cursor: pointer;
+        text-align: center;
+        @include r($md) {
+            display: block;
+
+        }
+    }
+
+    &__trigger-text {
+        font-size: 14px;
+        
+        @include r($sm) {
+            font-size: 12px;
+        }
+    }
+
+    &__trigger-icon {
+        margin-top: 6px;
+        display: block;
+        width: 40px;
+        height: 25px;
+    }
 
 
-	&__item,
-	li {
-		margin-right: 10px;
-		
-		&:last-child {
-			margin-right: 0;
+    &__checkbox {
+        display: none;
+        
+        &:checked ~ .nav__list {
+            @include r($md) {
+                position: absolute;
+                top: 100%;
+                right: -10px;
+                min-width: 300px;
+                display: block;
+                padding: 20px 10px 10px;
+                
+                background: #58585a;
+                text-align: right;
+                border-radius:  0 0 10px 10px;
+            }
 
-		}
-	}
+            @include r($sm) {
+                
+                right: -25vw;
+                left: -25vw;
+                max-width: 300px;
+                min-width: auto;
+                text-align: center;
+                
+            }
+
+        }
+    }
+
+    
+    &__list {
+        display: flex;
+        font-size: 14px;
+        
+        @include r($md) {
+            display: none;
+
+        }
+
+    }
 
 
-	&__link,
-	a {
-		color: #FFF;
-		text-decoration: none;
-		
-		@include tr(color .3s ease);
+    &__item,
+    li {
+        margin-right: 10px;
+        
+        @include r($md) {
+            margin-right: 0;
+            margin-bottom: 10px;
 
-		&:hover {
-			color: darken(#FFF, 10);
-			
-			@include tr(color .3s ease);
+        }
 
-		}
+        &:last-child {
+            margin-right: 0;
 
-	}
+        }
+    }
+
+
+    &__link,
+    a {
+        color: #FFF;
+        text-decoration: none;
+        
+        @include tr(color .3s ease);
+
+        &:hover {
+            color: darken(#FFF, 10);
+            
+            @include tr(color .3s ease);
+
+        }
+
+    }
 
 }
+
+
+

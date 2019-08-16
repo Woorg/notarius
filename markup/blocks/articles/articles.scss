@@ -3,6 +3,18 @@
     &__in {
         padding-top: 74px;
         padding-bottom: 74px;
+        
+        @include r($md) {
+            padding-top: (74px / 2);
+            padding-bottom: (74px / 2);
+        }
+
+
+        @include r($sm) {
+            padding-top: 62px;
+            padding-bottom: 62px;
+        }
+
     }
 
     &__title {
@@ -12,12 +24,23 @@
         font-weight: 700;
         line-height: 1.285;
         
+        @include r($sm) {
+
+            margin-bottom: 22px;
+            font-size: 24px;
+        }
+        
     }
 
     &__list {
 
         display: flex;
         justify-content: space-between;
+        
+        @include r($md) {
+            flex-wrap: wrap;
+
+        }
         
     }
 
@@ -27,6 +50,14 @@
         flex-shrink: 0;
         flex-grow: 0;
         flex-basis: 298px;
+        
+        @include r($md) {
+            margin-bottom: 36px;
+            max-width: 100%;
+            flex-basis: 100%;
+
+        }
+
     }
 
     &__item-title {
@@ -34,6 +65,13 @@
         font-size: 22px;
         font-weight: 700;
         line-height: 1.272;
+        
+        @include r($sm) {
+            margin-bottom: 15px;
+            font-size: 18px;
+
+        }
+
     }
 
     &__text {
@@ -43,12 +81,25 @@
         font-weight: 400;
         line-height: 1.25;
         overflow: hidden;
+        
+        @include r($sm) {
+            max-height: 132px;
+            font-size: 14px;
+            line-height: 1.3;
+
+        }
+
     }
 
     &__more {
         margin-top: auto;
         color: #158AD0;
         text-decoration: underline;
+        @include r($sm) {
+            
+            font-size: 14px;
+
+        }
         &:hover {
             text-decoration: none;
 
@@ -65,11 +116,22 @@
     .articles__in {
         padding-top: 48px;
         padding-bottom: 30px;
+        
+        @include r($sm) {
+            padding-top: 32px;
+            padding-bottom: 50px;
+        }
+
     } 
 
     
     .articles__title {
         margin-bottom: 24px;
+        
+        @include r($sm) {
+            margin-bottom: 34px;
+
+        }
     }
 
     .articles__list {
@@ -79,6 +141,25 @@
 
     .articles__item {
         position: relative;
+        
+        @include r($md) {
+            text-align: center;
+        }
+
+        @include r($sm) {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+
+        &:last-child {
+            
+            @include r($sm) {
+                margin-bottom: 0;
+            }
+
+        }
+        
     }
 
 
@@ -86,13 +167,16 @@
         margin-bottom: 20px;
         max-height: 160px;
         
-        background: red;
         border-radius: 10px;
         overflow: hidden;
         
+        @include r($sm) {
+            margin-bottom: 5px;
+
+        }
+
         img {
 
-            background: red;
             
         }
 
@@ -101,6 +185,11 @@
     .articles__item-title {
 
         font-size: 24px;
+        
+        @include r($sm) {
+            font-size: 21px;
+
+        }
         
     }
 
@@ -112,6 +201,9 @@
         left: 0;
         right: 0;
         
+
+
+
     }
 
 

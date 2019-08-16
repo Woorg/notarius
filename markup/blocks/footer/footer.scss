@@ -5,7 +5,19 @@
     &__in {
         padding-top: 32px;
         padding-bottom: 30px;
+
+        @include r($sm) {
+
+            padding-top: 28px;
+            padding-bottom: 15px;
+            
+        }
+
+
     } 
+
+
+
 
 
     &__copyright {
@@ -15,6 +27,14 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
+        
+        @include r($sm) {
+            margin-bottom: 18px;
+            font-size: 12px;
+            font-weight: normal;
+
+        }
+
     }
 
 
@@ -24,12 +44,24 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 1.285;
+        
+        @include r($sm) {
+            font-size: 12px;
+            line-height: 1.5;
+
+        }
     }
 
     &__bottom {
         padding-top: 15px;
         padding-bottom: 10px;
         display: flex;
+        
+        @include r($sm) {
+            padding-top: 10px;
+            flex-wrap: wrap;
+
+        }
         
     }
 
@@ -40,12 +72,40 @@
 
     }
 
+
+    &__time {
+        
+        @include r($sm) {
+            max-width: 160px;
+            order: 1;
+
+        }
+
+    }
+
+    &__phone {
+        
+        @include r($sm) {
+            max-width: 100px;
+            order: 2;
+
+        }
+    }
+
+
     &__phone-title,
     &__time-title {
         margin-bottom: 1px;
         font-size: 14px;
         font-weight: 700;
         line-height: 1.285;
+        
+        @include r($sm) {
+            
+            font-size: 12px;
+
+        }
+
     }
 
     &__phone-val,
@@ -56,6 +116,13 @@
         font-weight: 400;
         line-height: 1.285;
         text-decoration: none;
+        
+        @include r($sm) {
+
+            font-size: 12px;
+
+        }
+
     }
 
     &__phone-val {
@@ -71,6 +138,15 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 1.285;
+    
+        @include r($sm) {
+            margin-left: 0;
+            margin-bottom: 14px;
+            order: -1;
+            font-size: 12px;
+
+        }
+
     }
     
 

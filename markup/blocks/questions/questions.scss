@@ -5,6 +5,16 @@
     &__in {
         padding-top: 21px;
         padding-bottom: 41px;
+        
+        @include r($md) {
+            padding-bottom: (41px / 2);
+        }
+
+
+        @include r($sm) {
+            padding-top: 40px;
+            padding-bottom: 47px;
+        }
 
     }
 
@@ -14,16 +24,37 @@
         font-size: 35px;
         font-weight: 700;
         line-height: 1.285;
+        
+        @include r($md) {
+            text-align: center;
+        }
+
+        @include r($md) {
+            font-size: 24px;
+        }
+
     }
 
     &__w {
         display: flex;
+        
+        @include r($md) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
         
     }
 
     &__image {
         margin-top: 14px;
         margin-right: 90px;
+        
+        @include r($md) {
+            margin-right: 0;
+        }
+
         img {
             
             max-width: 100%;
@@ -37,11 +68,19 @@
         font-size: 28px;
         font-weight: 400;
         line-height: 36px;
+        
+        @include r($sm) {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
     }
 
 
     &__phone-title {
-        
+        @include r($sm) {
+            font-size: 21px;
+        }
     }
 
     &__phone-val {
@@ -50,6 +89,11 @@
         font-weight: 700;
         line-height: 1;
         text-decoration: none;
+        
+        @include r($sm) {
+            font-size: 24px;
+        }
+
         &:hover {
             color: darken(#0c9dd9, 10);
         }
@@ -61,6 +105,16 @@
         margin-left: 85px;
         max-width: 280px;
         width: 100%;
+        
+        @include r($md) {
+
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        @include r($sm) {
+
+        }
         
     }
 

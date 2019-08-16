@@ -5,10 +5,25 @@
         padding-right: 116px;
         padding-bottom: 79px;
         padding-left: 92px;
+        
+        @include r($md) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include r($sm) {
+            padding-top: 95px;
+        }
+
     }
 
     &__title {
         margin-bottom: 21px;
+        
+        @include r($sm) {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
 
     }
 
@@ -19,6 +34,12 @@
             font-size: 22px;
             font-weight: 700;
             line-height: 1.272;
+            
+            @include r($sm) {
+                margin-bottom: 30px;
+                font-size: 18px;
+            }
+
         }
 
         p {
@@ -28,6 +49,12 @@
         
         ul {
             margin-left: 52px;
+            
+            @include r($sm) {
+                margin-left: 25px;
+
+            }
+
             
             li {
                 padding-left: 0;

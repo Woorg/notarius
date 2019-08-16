@@ -3,6 +3,12 @@
 
     &__in {
         padding-bottom: 40px;
+        
+        @include r($sm) {
+            padding-bottom: 60px;
+        }
+
+
     }
     
     &__w
@@ -16,22 +22,51 @@
 
         border-radius: 10px;
         background-color: #dff2ff;
+        
+        @include r($md) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include r($sm) {
+            padding-top: 25px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
+
     }
 
     &__title
     {
+        margin-bottom: 7px;
+        
         font-size: 28px;
         font-weight: 700;
 
-        margin-bottom: 7px;
 
         color: #000;
+        
+        @include r($sm) {
+
+            font-size: 24px;
+        }
+
     }
 
 
     .form__row
     {
         display: flex;
+        
+
+        @include r($sm) {
+
+           flex-wrap: wrap;
+           
+        }
+
     }
 
 
@@ -43,18 +78,36 @@
             font-weight: 700;
 
             cursor: auto;
+            
+            @include r($sm) {
+                
+                font-size: 16px;
+            
+            }
+
+
         }
+
+
 
         .form__input_range
         {
+            padding-top: 7px;
+            padding-bottom: 10px;
+            
             font-size: 27px;
             font-weight: 700;
 
-            padding-top: 7px;
-            padding-bottom: 10px;
 
             color: #000;
             border-radius: 5px;
+            
+
+            @include r($sm) {
+                margin-top: 14px;                
+            
+            }
+            
 
             span
             {
@@ -68,6 +121,11 @@
     .form__col
     {
         width: 339px;
+        
+        @include r($sm) {
+
+            width: 100%;
+        }
 
         &:nth-child(1)
         {
@@ -76,6 +134,12 @@
             flex-grow: 0;
             flex-shrink: 0;
             flex-basis: 280px;
+            
+            @include r($sm) {
+
+                flex-basis: auto;
+            }
+
         }
 
         &:nth-child(2)
@@ -85,39 +149,45 @@
             flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 202px;
+            
+            @include r($sm) {
+
+                flex-basis: auto;
+            }
+
         }
 
 
     }
 
 
-    .irs
-    {
+    .irs {
         margin-top: -11px;
+    
+        @include r($sm) {
+            margin-top: -4px;
+        }
+
     }
 
-    .irs--flat
-    {
+    .irs--flat {
         height: auto;
         margin-top: 0;
     }
 
-    .irs-line
-    {
+    .irs-line {
         height: 6px;
 
         background: #b2b2b2;
     }
 
-    .irs-bar
-    {
+    .irs-bar {
         height: 6px;
 
         background: #0c9dd9;
     }
 
-    .irs-handle
-    {
+    .irs-handle {
         top: 18px;
 
         width: 20px;
@@ -126,16 +196,14 @@
         border-radius: 50%;
         background-image: linear-gradient(180deg, #48d0fd 0%, #0e9fd8 100%);
 
-        & > i:first-child
-        {
+        & > i:first-child {
             display: none;
         }
     }
 
     .irs-min,
     .irs-max,
-    .irs-single
-    {
+    .irs-single {
         display: none;
     }
 
@@ -144,57 +212,81 @@
     // }
 
 
-    .form__field_checkbox
-    {
+    .form__field_checkbox {
         margin-top: 40px;
+        
+        @include r($sm) {
+            margin-top: 53px;
+        }
 
-        .form__label
-        {
-            .form__checkbox
-            {
+
+        .form__label {
+
+            .form__checkbox {
                 top: calc(50% - 5px);
                 transform: translateY(-50%);
             }
+
+        }
+
+
+        .form__label-text {
+            @include r($sm) {
+                padding-left: 38px;
+            }
+
         }
     }
 
 
 
 
-    &__result
-    {
+    &__result {
         margin-left: auto;
         color: #000;
 
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: 200px;
+        
+        @include r($sm) {
+            margin-top: 30px;
+            border: solid 1px #0c9dd9;
+            padding-top: 21px;
+            padding-bottom: 23px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
     }
 
-    &__result-title
-    {
+    &__result-title {
+        margin-bottom: 16px;
+        
         font-size: 18px;
         font-weight: 400;
 
-        margin-bottom: 16px;
+        
+        @include r($sm) {
+            margin-bottom: 2px;
+            font-size: 16px;
+        }
+
     }
 
 
-    &__result-val
-    {
+    &__result-val {
         margin-left: 19px;
 
         color: #000;
     }
 
-    &__result-price
-    {
+    &__result-price {
         font-size: 40px;
         font-weight: 700;
     }
 
-    &__result-rub
-    {
+    &__result-rub {
         font-size: 20px;
         font-weight: 400;
 
@@ -202,26 +294,36 @@
     }
 
 
-    &__list
-    {
+    &__list {
         margin-top: 70px;
         margin-right: 50px;
         font-size: 16px;
         font-weight: 400;
 
         color: #636363;
+        
+        @include r($sm) {
+            margin-top: 35px;
+            margin-right: 0;
+        }
     }
 
 
-    &__item
-    {
+    &__item {
         margin-bottom: 20px;
         padding-left: 32px;
         line-height: 1.25;
 
         position: relative;
-        &:after
-        {
+        
+        @include r($sm) {
+            // margin-bottom: 20px;
+            padding-left: 28px;
+            font-size: 15px;
+            line-height: 1.33;
+        }
+        
+        &:after {
             position: absolute;
             top: 0;
             left: 0;
@@ -234,5 +336,6 @@
             background: url('../images/general/checkbox-icon.svg') 0 0 no-repeat;
             background-size: cover;
         }
+
     }
 }

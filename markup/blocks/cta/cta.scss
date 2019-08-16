@@ -4,6 +4,12 @@
         padding-top: 45px;
         padding-bottom: 45px;
         text-align: center;
+        
+        @include r($sm) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+
     }
 
     &__button {
@@ -12,7 +18,24 @@
         padding-left: 95px;
         padding-bottom: 16px;        
         text-decoration: none;
+        text-align: center;
         
+        @include r($sm) {
+            padding-top: 22px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 14px;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        span {
+            @include r($sm) {
+                display: none;
+
+            }
+        }
+
     }
 
 

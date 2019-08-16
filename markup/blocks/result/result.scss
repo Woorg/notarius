@@ -8,8 +8,21 @@
         padding-right: 100px;
         padding-bottom: 61px;
         padding-left: 100px;
-
         color: #fff;
+        
+        @include r($md) {
+            padding-left: 20px;
+            padding-right: 30px;
+        }
+
+        
+        @include r($sm) {
+            padding-top: 34px;
+            padding-bottom: 31px;
+            padding-right: 20px;
+        }
+
+
     }
 
     &__title
@@ -17,19 +30,31 @@
         font-size: 35px;
         font-weight: 700;
         line-height: 1.285;
-
         color: #fff;
+        
+
+        @include r($sm) {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
     }
 
     &__text
     {
+        margin-bottom: 23px;
         font-size: 22px;
         font-weight: 400;
         line-height: 1.272;
 
-        margin-bottom: 23px;
 
         color: #92dfff;
+
+        @include r($sm) {
+            font-size: 18px;
+            line-height: 1.33;
+
+        }
     }
 
     &__w
@@ -37,6 +62,14 @@
         position: relative;
 
         padding-left: 199px;
+        
+        @include r($sm) {
+            margin-left: -19px;
+            
+            padding-left: 0;
+
+        }
+
     }
 
 
@@ -46,6 +79,15 @@
         top: 8px;
         left: 0;
 
+        @include r($sm) {
+            position: static;
+            top: 0;
+            margin-bottom: 30px;
+            padding-top: 7px;
+            text-align: center;
+        }
+
+
         img
         {
             max-width: 100%;
@@ -53,13 +95,21 @@
         }
     }
 
-    &__subtitle
-    {
+    &__subtitle {
         margin-bottom: 52px;
         font-family: Roboto;
         font-size: 43px;
         font-weight: 700;
         line-height: 1;
+
+        @include r($sm) {
+
+            margin-bottom: 33px;
+            margin-left: 16px;
+            padding-right: 42px;
+            font-size: 31px;
+
+        }
 
 
         span
@@ -75,6 +125,13 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        
+        @include r($sm) {
+
+            margin-left: 16px;
+
+        }
+
     }
 
 
@@ -91,6 +148,57 @@
         font-size: 24px;
         font-weight: 400;
         
+        @include r($sm) {
+            margin-bottom: 32px;
+            padding-left: 26px;
+            white-space: nowrap;
+
+        }
+
+
+        &:nth-child(1) {
+            
+            @include r($sm) {
+                order: 1;
+            }
+            
+        }
+
+
+        &:nth-child(2) {
+            
+            @include r($sm) {
+                order: 4;
+            }
+
+        }
+
+
+        &:nth-child(3) {
+            
+            @include r($sm) {
+                order: 2;
+
+            }
+            
+        }
+
+        &:nth-child(4) {
+            
+            @include r($sm) {
+                order: 5;
+            }
+            
+        }
+
+        &:nth-child(5) {
+            
+            @include r($sm) {
+                order: 3;
+            }
+            
+        }
+        
         &:after {
             position: absolute;
             top: 3px;
@@ -104,7 +212,10 @@
     }
 
     &__item-title {
-        
+        @include r($sm) {
+
+            font-size: 20px;
+        }
     }
 
     &__item-text {

@@ -7,6 +7,16 @@
     opacity: 1;
     
     @include tr(opacity .3s ease);
+    
+
+    @include r($sm) {
+
+		@include bg($logo-mob);
+    	
+    }
+
+
+
 
     &:hover {
         opacity: 0.8;

@@ -2,14 +2,28 @@
     background-color: #f4faff;
     overflow: hidden;
     padding-bottom: 96px;
+    
+    @include r($md) {
+        padding-bottom: (96px / 2);
+    }
+
     &__in {
         padding-top: 33px;
         padding-bottom: 7px;
+        
+        @include r($sm) {
+            padding-top: 34px;
+            padding-bottom: 20px;
+        }
         
     }
 
     &__title {
         margin-bottom: 20px;
+        @include r($sm) {
+            font-size: 24px;
+        }
+
 
     }
 
@@ -19,11 +33,23 @@
 
     &__item {
         // width: 182px;
+        
+        @include r($sm) {
+            height: 260px;
+
+
+        }
     }
 
     &__link {
+        height: 100%;
         display: block;
         text-decoration: none;
+        
+        // @include r($sm) {
+        //     margin: auto;
+        //     width: 182px;
+        // }
         
     }
 

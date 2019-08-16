@@ -106,11 +106,11 @@ import 'ion-rangeslider';
                 dots: false,
                 arrows: false,
                 infinite: true,
-                slidesToShow: 4,
+                slidesToShow: 1,
                 speed: 300,
                 adaptiveHeight: true,
-                // centerMode: true,
-                centerPadding: '90px',
+                centerMode: true,
+                centerPadding: '66px',
                 // prevArrow: '<button class="popular-cars__arrow popular-cars__arrow_prev"><svg class="popular-cars__arrow-icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L1 7L7 1" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
                 // nextArrow: '<button class="popular-cars__arrow popular-cars__arrow_next"><svg class="popular-cars__arrow-icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L1 7L7 1" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
 
@@ -147,11 +147,11 @@ import 'ion-rangeslider';
                 dots: false,
                 arrows: false,
                 infinite: true,
-                slidesToShow: 2,
+                slidesToShow: 1,
                 speed: 300,
                 adaptiveHeight: true,
                 centerMode: true,
-                centerPadding: '30px',
+                centerPadding: '0px',
                 // prevArrow: '<button class="popular-cars__arrow popular-cars__arrow_prev"><svg class="popular-cars__arrow-icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L1 7L7 1" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
                 // nextArrow: '<button class="popular-cars__arrow popular-cars__arrow_next"><svg class="popular-cars__arrow-icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13L1 7L7 1" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
 
@@ -628,6 +628,27 @@ import 'ion-rangeslider';
             Popups
 
         */
+
+
+
+
+
+
+
+
+        let $showMap = $('.addresses__show-w');
+
+        $showMap.on( 'click', function (e) {
+
+            e.preventDefault();
+            $(this).prev().toggle();
+            $(this).children().text( $(this).text() == 'показать на карте' ? 'свернуть карту' : 'показать на карте' );
+        
+        });
+
+
+
+
 
 
         

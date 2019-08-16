@@ -4,10 +4,20 @@
     &__in {
         padding-top: 31px;
         padding-bottom: 33px;
+        
+        @include r($sm) {
+            padding-top: 20px;
+            
+            padding-bottom: 40px;
+        }
     }
 
     &__title {
         margin-bottom: 12px;        
+        
+        @include r($sm) {
+            margin-bottom: 10px;
+        }
 
     }
 
@@ -18,12 +28,17 @@
         font-weight: 400;
         line-height: 1.27;
         
+        @include r($sm) {
+            font-size: 18px;
+        }
+        
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        
     }
 
     &__item {
@@ -32,10 +47,28 @@
         flex-basis: 140px;
 
         text-align: center;
+        
+        @include r($md) {
+            margin-bottom: 30px;
+            max-width: 33%;
+            flex-basis: auto;
+        }
+
+
+        @include r($sm) {
+            margin-bottom: 44px;
+            max-width: 50%;
+        }
+
+
     }
 
     &__image {
         margin-bottom: 30px;
+        
+        @include r($sm) {
+            margin-bottom: 17px;
+        }
         
     }
 
@@ -44,6 +77,11 @@
         font-size: 14px;
         font-weight: 300;
         line-height: 1.285;
+        
+        @include r($sm) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         
 
     }
